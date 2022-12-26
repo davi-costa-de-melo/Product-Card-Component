@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card-component {
+    background-color: hsl(0, 0%, 100%);
+    width: 600px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+}
+
+.product-card-component .product-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.product-card-component .product-informations {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card-component .product-informations .product-type {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.product-card-component .product-informations .product-name {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    opacity: .85;
+    line-height: 34px;
+}
+
+.product-card-component .product-informations .product-description {
+    font-family: 'Montserrat', sans-serif;
+    color:hsl(228, 12%, 48%);
+}
+
+.product-card-component .product-informations .product-price-informations {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+.product-card-component .product-informations .product-price-informations .product-current-price {
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 32px;
+}
+
+.product-card-component .product-informations .product-price-informations .product-regular-price {
+    font-family: 'Montserrat', sans-serif;
+    color:hsl(228, 12%, 48%);
+    font-size: 13px;
+}
+
+.product-card-component .product-informations .buy-button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding: 15px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: background-color .2s ease-in-out;
+}
+
+.product-card-component .product-informations .buy-button:hover {
+    background-color: hsl(212, 21%, 14%);
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        padding: 5vh 4vw;
+    }
+
+    .product-card-component {
+        width: initial;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-card-component .product-image img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .product-card-component .product-informations {
+        padding: 20px;
+        gap: 14px;
+    }
+}
+
+
+
